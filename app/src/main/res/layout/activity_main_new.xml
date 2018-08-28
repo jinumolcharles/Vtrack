@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal">
+
+
+                    <pl.droidsonroids.gif.GifTextView
+                        android:id="@+id/gif"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/gifnew" />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/framelayout_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@drawable/covercopynew"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.3">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editMobileNo"
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="90dp"
+                            android:background="@drawable/shape"
+                            android:drawableLeft="@drawable/search"
+                            android:ems="8"
+                            android:gravity="center_horizontal"
+                            android:hint="Find your Location"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/bar_color"
+                            android:textSize="14sp"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <include layout="@layout/content_main" />
+
+
+
+
+        <!--<it.sephiroth.android.library.bottomnavigation.BottomNavigation-->
+        <!--android:id="@+id/BottomNavigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@color/white"-->
+        <!--app:bb_behavior="shy|shifting"-->
+        <!--app:bbn_badgeProvider="@string/bbn_badgeProvider"-->
+        <!--app:bbn_entries="@menu/navigation"-->
+        <!--app:itemBackground="@color/black"-->
+        <!--app:itemIconTint="@color/red"-->
+        <!--app:itemTextColor="@color/red"-->
+        <!--app:layout_behavior="@string/bbn_tablet_view_behavior" />-->
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

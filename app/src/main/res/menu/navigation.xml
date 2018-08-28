@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/homeoutlinedsymbol"
+        android:title="Home" />
+
+    <!--<item-->
+        <!--android:id="@+id/my_action1"-->
+        <!--android:icon="@drawable/heart"-->
+        <!--android:color="@color/red"-->
+        <!--android:title="Saved"-->
+        <!--/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/navigation_cart"-->
+        <!--android:icon="@drawable/careaboutair"-->
+        <!--android:title="Notification"  />-->
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/fef"
+        android:title="About us"  />
+
+</menu>

@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'AndroidDebugKey'
+            keyPassword 'jinu1494@'
+            storeFile file('E:/Jinu/Vtrack/app/build/outputs/vtrack.jks')
+            storePassword 'jinu1494@'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.codeleven.vtrack"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 19
+        versionName "19.0"
+        multiDexEnabled = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
+    }
+}
+configurations.all {
+    // OkHttp 3.5.0+ includes the websockets API, so we need this to prevent a conflict
+    exclude module: 'okhttp-ws'
+
+        resolutionStrategy.force 'com.google.android.gms:play-services-gcm:9.8.0'
+
+
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('io.socket:socket.io-client:0.7.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    //    compile 'com.aurelhubert:ahbottomnavigation:0.1.3'
+
+    //    compile 'it.sephiroth.android.library.bottomnavigation:bottom-navigation:2.0.1-rc1'
+
+    //    compile 'com.daimajia.slider:library:1.1.5@aar'
+
+    //    compile 'com.github.felixsoares:BottomNavygation:1.8.6'
+
+    //    compile 'com.github.felixsoares:BottomNavygation:1.8.3'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.victor:lib:1.0.1'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.alexzh:circleimageview:1.1.2@aar'
+    compile 'com.github.rey5137:material:1.2.2'
+    compile 'com.mikhaellopez:circularimageview:2.0.1'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.roughike:bottom-bar:2.0'
+    compile 'com.android.support:support-vector-drawable:26.+'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.felipecsl:gifimageview:2.1.0'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.10'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.Cutta:ContinuousScrollableImageView:1.0'
+    compile 'com.android.support:support-compat:25.1.1'
+    compile 'com.daimajia.easing:library:2.0@aar'
+    compile 'com.daimajia.androidanimations:library:2.3@aar'
+    compile 'com.github.traex.rippleeffect:library:1.3'
+    compile 'com.ss.bottomnavigation:bottomnavigation:1.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.github.d-max:spots-dialog:0.7@aar'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'com.github.tony19:logback-android-core:1.1.1-6'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'org.jsoup:jsoup:1.11.3'
+    compile 'com.github.seanzor:detect-webgl:1.0.3'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    compile 'com.bcgdv.asia.lib:ticktock:1.3'
+    compile 'com.rom4ek:arcnavigationview:1.0.3'
+    compile 'com.github.VyacheslavShmakin:gp-collapsing-toolbar:1.0.1'
+    compile 'com.github.alirezaashrafi:GoogleMapView:1.0.4'
+    compile 'com.google.android.gms:play-services-auth:11.0.0'
+    compile 'com.google.android.gms:play-services-location:11.0.0'
+    compile 'com.google.android.gms:play-services-maps:11.0.0'
+    compile 'com.google.android.gms:play-services-places:11.0.0'
+    compile 'com.google.maps.android:android-maps-utils:0.3.4'
+    compile 'com.github.opacapp:multiline-collapsingtoolbar:v1.0.0'
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Ownshop</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_example">example</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="text_des">
+        We are very much pleased to introduce ourselves as one of the business groups
+        of Kerala with brand name “CONCEPT” having tagline “True and Transparent
+        Relationship” catering the sectors  of Automotive, Asset Management,Project Management,
+        Agriculture and Training. The motive and belief of having long lasting personal
+        and professional business have bought us the success in all the projects established
+        from the day of inception; As we believe in the policy of “ Delighted Customers and
+        Delighted Employee ”,we want to be in touch with our customers as much as we can so
+        that we can serve them in the most efficient manner.For those who treat time as life
+        we have great career at Concept and fantastic positions open for driven and learning oriented individuals.
+    </string>
+    <string name="title_activity_maps">Map</string>
+</resources><!--We are very much pleased to introduce ourselves as one of the\n business groups--><!--of Kerala with brand name “CONCEPT” having \ntagline “True and Transparent--><!--Relationship” catering the sectors \n of Automotive, Asset Management,Project Management,\n--><!--Agriculture and Training. The motive and belief of having long\n lasting personal--><!--and professional business have bought us the \nsuccess in all the projects established--><!--from the day of inception;\nAs we believe in the policy of “ Delighted Customers and--><!--Delighted Employee ”,we want to be in touch with our customers as much as we can so--><!--that we can serve them in the most efficient manner.For those who treat time as life--><!--we have great career at Concept and fantastic positions open for driven and learning oriented individuals.-->
